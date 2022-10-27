@@ -293,6 +293,7 @@ Scrapers available for:
 - `https://vegolosi.it/ <https://vegolosi.it>`_
 - `https://vegrecipesofindia.com/ <https://www.vegrecipesofindia.com/>`_
 - `https://watchwhatueat.com/ <https://watchwhatueat.com/>`_
+- `https://www.weightwatchers.com/ <https://www.weightwatchers.com/>`_(*)
 - `https://whatsgabycooking.com/ <https://whatsgabycooking.com>`_
 - `https://www.wholefoodsmarket.com/ <https://www.wholefoodsmarket.com/>`_
 - `https://www.wholefoodsmarket.co.uk/ <https://www.wholefoodsmarket.co.uk/>`_
@@ -304,6 +305,7 @@ Scrapers available for:
 - `https://zeit.de/ (wochenmarkt) <https://www.zeit.de/zeit-magazin/wochenmarkt/index>`_
 - `https://zenbelly.com/ <https://zenbelly.com>`_
 
+(*) offline saved files only. Page requires login
 
 Contribute
 ----------
@@ -342,14 +344,13 @@ Assuming you have ``>=python3.7`` installed, navigate to the directory where you
     python3 -m venv .venv &&
     source .venv/bin/activate &&
     pip install -r requirements-dev.txt &&
-    pre-commit install &&
-    python run_tests.py
+    python -m unittest
 
 In case you want to run a single unittest for a newly developed scraper
 
 .. code:: shell
 
-    python -m coverage run -m unittest tests.test_myscraper
+    python -m unittest tests.test_myscraper
 
 FAQ
 ---
